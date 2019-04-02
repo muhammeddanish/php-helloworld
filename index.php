@@ -79,7 +79,7 @@ function test_input($data) {
   <br><br>
   Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
   <br><br>
-  Gender:
+  sex:
   <input type="radio" name="sex" <?php if (isset($sex) && $sex=="female") echo "checked";?> value="female">Female
   <input type="radio" name="sex" <?php if (isset($sex) && $sex=="male") echo "checked";?> value="male">Male
   <input type="radio" name="sex" <?php if (isset($sex) && $sex=="other") echo "checked";?> value="other">Other  
