@@ -1,11 +1,11 @@
-#<html>
- #<head>
-  #<title>PHP Test</title>
- #</head>
- #<body>
- #<?php echo '<p>dravid</p>'; ?> 
- #</body>
-#</html>
+//<html>
+ //<head>
+  //<title>PHP Test</title>
+ //</head>
+ //<body>
+ //<?php echo '<p>dravid</p>'; ?> 
+ //</body>
+//</html>
 
 <!DOCTYPE HTML>  
 <html>
@@ -18,8 +18,8 @@
 
 <?php
 // define variables and set to empty values
-$nameErr = $emailErr = $genderErr = $websiteErr = "";
-$name = $email = $gender = $comment = $website = "";
+$nameErr = $emailErr = $sexErr = $websiteErr = "";
+$name = $email = $sex = $comment = $website = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
@@ -73,7 +73,7 @@ function test_input($data) {
 }
 ?>
 
-<h2>PHP Form Validation Example</h2>
+<h2>PHP zippyops admission form</h2>
 <p><span class="error">* required field</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
   Name: <input type="text" name="name" value="<?php echo $name;?>">
@@ -88,10 +88,10 @@ function test_input($data) {
   Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
   <br><br>
   Gender:
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="other">Other  
-  <span class="error">* <?php echo $genderErr;?></span>
+  <input type="radio" name="sex" <?php if (isset($sex) && $sex=="female") echo "checked";?> value="female">Female
+  <input type="radio" name="sex" <?php if (isset($sex) && $sex=="male") echo "checked";?> value="male">Male
+  <input type="radio" name="sex" <?php if (isset($sex) && $sex=="other") echo "checked";?> value="other">Other  
+  <span class="error">* <?php echo $sexErr;?></span>
   <br><br>
   <input type="submit" name="submit" value="Submit">  
 </form>
@@ -106,7 +106,7 @@ echo $website;
 echo "<br>";
 echo $comment;
 echo "<br>";
-echo $gender;
+echo $sex;
 ?>
 
 </body>
